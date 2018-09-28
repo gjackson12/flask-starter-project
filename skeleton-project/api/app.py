@@ -1,14 +1,14 @@
 from flask import Flask, jsonify
 from flask_restful import Api
 
-from {{cookiecutter.app_name}}.extensions import db, jwt, migrate
+from extensions import db, jwt, migrate
 
 from db import db
 from resources.user import UserRegister, UserLogin, User, UserLogout
 
 app = Flask(__name__)
 
-app.config.from_object('{{cookiecutter.app_name}}.config')
+app.config.from_object('config')
 
 api = Api(app)
 

@@ -3,7 +3,7 @@ Use env var to override
 """
 DEBUG = True
 
-SQLALCHEMY_DATABASE_URI = "postgresql:////tmp/{{cookiecutter.app_name}}.db"
+SQLALCHEMY_DATABASE_URI = "sqlite:///api.db"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 PROPAGATE_EXCEPTIONS = True
 
