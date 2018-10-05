@@ -3,7 +3,6 @@ from flask_restful import Api
 
 from extensions import db, jwt, migrate
 
-from db import db
 from resources.user import UserRegister, UserLogin, User, UserLogout
 
 app = Flask(__name__)
@@ -67,4 +66,4 @@ api.add_resource(UserLogout, '/logout')
 
 if __name__ == '__main__':
     db.init_app(app)
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

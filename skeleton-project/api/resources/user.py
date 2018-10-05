@@ -8,7 +8,7 @@ from flask_jwt_extended import (
     get_raw_jwt,
     jwt_required
 )
-from api.models.user import UserModel
+from models.user import UserModel
 
 _user_parser = reqparse.RequestParser()
 _user_parser.add_argument('username',
