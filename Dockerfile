@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN echo "hello, world!" > the-file.txt
+
 EXPOSE 5000
 
 CMD [ "python", "skeleton-project/api/app.py" ]
